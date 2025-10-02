@@ -86,8 +86,6 @@ int main()
     while (1){
         int ligne = 6, colonne = 6;
         
-        joueurActu = (joueurActu == 'X') ? 'O' : 'X';
-        
         //choix ligne
         while (ligne < 1 || ligne > dim){
             printf("Joueur %c, sur quelle ligne voulez-vous jouer ? (1 à %d)\n", joueurActu, dim);
@@ -123,6 +121,8 @@ int main()
             printf("Match nul !\n");
             break;
         }
+
+        joueurActu = (joueurActu == 'X') ? 'O' : 'X';
     }
     
     return 0;
